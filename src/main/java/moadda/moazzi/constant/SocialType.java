@@ -1,4 +1,4 @@
-package moadda.moazzi.domain.member.constant;
+package moadda.moazzi.constant;
 
 import lombok.Getter;
 

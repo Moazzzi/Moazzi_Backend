@@ -1,4 +1,4 @@
-package moadda.moazzi.api.oauth.social.google;
+package moadda.moazzi.dto;
 
 import lombok.Builder;
 import lombok.Data;

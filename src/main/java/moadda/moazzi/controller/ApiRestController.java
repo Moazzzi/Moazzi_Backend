@@ -1,6 +1,9 @@
-package moadda.moazzi.api.oauth.social.google;
+package moadda.moazzi.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import moadda.moazzi.dto.GoogleLoginResponse;
+import moadda.moazzi.dto.GoogleOAuthRequest;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
