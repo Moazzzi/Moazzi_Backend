@@ -1,2 +1,4 @@
-
-google:
+spring:
+  profiles:
+    active:
+    - dev

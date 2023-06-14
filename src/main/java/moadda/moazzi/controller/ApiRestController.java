@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.net.URI;
 
 @Slf4j
-@RestController
+//@RestController
 public class ApiRestController {
 
     @Value("${google.auth.url}")
