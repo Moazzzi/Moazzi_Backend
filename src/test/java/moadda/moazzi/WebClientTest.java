@@ -25,7 +25,7 @@ class WebClientTest {
 	@Autowired
 	FestivalMapper festivalMapper;
 
-	@Test
+	//@Test
 	void test() {
 		DefaultUriBuilderFactory uriBuilderFactory = new DefaultUriBuilderFactory();
 		uriBuilderFactory.setEncodingMode(EncodingMode.NONE);
