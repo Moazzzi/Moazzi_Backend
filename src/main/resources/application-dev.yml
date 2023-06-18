@@ -1,12 +1,17 @@
 spring:
-  h2:
-    console:
-      enabled: true  # H2 콘솔 활성화
   datasource:
-    url: ENC(xdBfa1rwrZ/LMvpSdHqKGv99u6o8raXkdnPw7Cej1Kw=) # H2 메모리 데이터베이스 URL
-    driver-class-name: ENC(S2mR+IW0s5XhFHjY1FNnZnejn6N/0Nui) # H2 드라이버 클래스
-    username: ENC(VB8JefN6TJVPd+AZ3Ke/OA==)  # 데이터베이스 사용자명
-    password:   # 데이터베이스 암호
+    driver-class-name: ENC(SojHfd7ZSvnUQCn1fMNHjv853XNoYAxYEuaibNt7HIU=)
+    url: ENC(dUiPl2g8GblvMGvBox/I24yzLUkuOMBqbsDetxyRsNx7fLflF7YLnGJwuWa0etBzdsshIyq9ZbU2U1z7CLjy3ZJn3SWg2OI9dqvCKt1XFLidEr3U2RT/MiZd0XNHhGU3)
+    username: ENC(No/sIV5zXfNA8r7ZLgQ9YQ==)
+    password: ENC(39zNt69vfFEYVrTUPauqXK+YgSFqIuwv)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL10Dialect
 
+apikeys:
+  festival: ENC(0YhxuUZupWN8ImReocB3uVKgHfjjSE7pKFUAubawybImQPKAKJ1fijcmgpZWPEyPzFxVyyJ7os8iOYplE6abw+BNpQejlmBHgJ/0s8C4Dq5x5/oTBpzjCeNMJu7G9fGvI3IhNIbRJw2kbqQmJ4zRGA==)
 
 google:

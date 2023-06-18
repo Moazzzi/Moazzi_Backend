@@ -25,14 +25,18 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	
 	/* Database */
-	runtimeOnly 'com.h2database:h2'
-	//runtimeOnly 'org.postgresql:postgresql'
+	//runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.postgresql:postgresql'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	
 	/* Util */
-	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'
 	
 	/* Test */
