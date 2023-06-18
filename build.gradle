@@ -38,6 +38,7 @@ dependencies {
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 	
 	/* Test */
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
