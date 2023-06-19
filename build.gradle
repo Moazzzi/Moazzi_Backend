@@ -4,6 +4,10 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
+jar {
+	enabled=false
+}
+
 group = 'moadda'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -30,10 +34,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	
 	/* Util */
-	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 	
 	/* Test */
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
