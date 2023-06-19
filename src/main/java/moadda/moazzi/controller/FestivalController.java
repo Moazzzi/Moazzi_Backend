@@ -30,7 +30,7 @@ public class FestivalController {
 	private final OpenApiFestivalService apiFestivalService;
 	private final FestivalService festivalService;
 	
-	@GetMapping("init")
+	//@GetMapping("init")
 	public ResponseEntity<?> initData(){
 		apiFestivalService.initDataInsert();
 		return ResponseEntity.ok().build();
