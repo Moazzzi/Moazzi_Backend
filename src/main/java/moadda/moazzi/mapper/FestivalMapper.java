@@ -8,7 +8,7 @@ import org.mapstruct.Named;
 
 import moadda.moazzi.dto.festival.FestivalRequestDto;
 import moadda.moazzi.dto.festival.FestivalResponseDto;
-import moadda.moazzi.dto.openapi.Item;
+import moadda.moazzi.dto.openapi.festival.Item;
 import moadda.moazzi.entity.Festival;
 
 @Mapper(componentModel = "spring")

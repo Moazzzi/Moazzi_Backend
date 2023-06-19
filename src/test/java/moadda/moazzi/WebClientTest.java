@@ -15,8 +15,8 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 import org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import moadda.moazzi.dto.openapi.CultureFestivalDto;
-import moadda.moazzi.dto.openapi.Item;
+import moadda.moazzi.dto.openapi.festival.CultureFestivalDto;
+import moadda.moazzi.dto.openapi.festival.Item;
 import moadda.moazzi.entity.Festival;
 import moadda.moazzi.mapper.FestivalMapper;
 
