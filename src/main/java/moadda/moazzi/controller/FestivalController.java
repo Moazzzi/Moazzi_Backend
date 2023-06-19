@@ -30,7 +30,7 @@ public class FestivalController {
 	private final OpenApiFestivalService apiFestivalService;
 	private final FestivalService festivalService;
 	
-	//@GetMapping("init")
+	@GetMapping("init")
 	public ResponseEntity<?> initData(){
 		apiFestivalService.initDataInsert();
 		return ResponseEntity.ok().build();
@@ -43,7 +43,6 @@ public class FestivalController {
     })
 	@GetMapping
 	public ResponseEntity<FestivalPageResponseDto> getFestivals(@Parameter(description = "조회 조건") FestivalRequestDto festivalRequestDto){
-		System.out.println(festivalRequestDto);
 		FestivalPageResponseDto festivalPageResponseDto = festivalService.getFestivals(festivalRequestDto);
 		return ResponseEntity.ok(festivalPageResponseDto); 
 	}
