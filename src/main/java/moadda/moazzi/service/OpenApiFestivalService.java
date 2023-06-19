@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import lombok.RequiredArgsConstructor;
-import moadda.moazzi.dto.openapi.festival.CultureFestivalDto;
-import moadda.moazzi.dto.openapi.festival.Item;
+import moadda.moazzi.dto.openapi.data.go.kr.festival.CultureFestivalDto;
+import moadda.moazzi.dto.openapi.data.go.kr.festival.Item;
 import moadda.moazzi.entity.Festival;
 import moadda.moazzi.mapper.FestivalMapper;
 import moadda.moazzi.repository.FestivalRepository;

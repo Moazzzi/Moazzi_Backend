@@ -1,4 +1,4 @@
-package moadda.moazzi.dto.openapi.festival;
+package moadda.moazzi.dto.openapi.data.go.kr.festival;
 
 import java.util.List;
 
