@@ -17,4 +17,12 @@ public class FestivalRequestDto {
 	
 	@Schema(description = "종료일자", nullable = true, defaultValue = "2023-01-01")
 	private String endDate = "2100-12-30";
+	
+	public String getStartDate() {
+		return this.startDate.equals("") ? "1900-01-01" : this.startDate; 
+	}
+	
+	public String getEndDate() {
+		return this.endDate.equals("") ? "1900-01-01" : this.endDate; 
+	}
 }

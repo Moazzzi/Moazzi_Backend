@@ -33,8 +33,8 @@ public class OpenApiFestivalService {
 			
 			for(Item item : items ) {
 				Festival festival = festivalMapper.toEntity(item);
-				//festivalRepository.save(festival);
-				System.out.println(festival);
+				festivalRepository.save(festival);
+				//System.out.println(festival);
 			}
 		}
 	}
