@@ -26,5 +26,6 @@ springdoc:
 
 apikeys:
   festival: ENC(0YhxuUZupWN8ImReocB3uVKgHfjjSE7pKFUAubawybImQPKAKJ1fijcmgpZWPEyPzFxVyyJ7os8iOYplE6abw+BNpQejlmBHgJ/0s8C4Dq5x5/oTBpzjCeNMJu7G9fGvI3IhNIbRJw2kbqQmJ4zRGA==)
+  permitArea: ENC(GMVikdnJhQKG3BXmRDxMo87JjsQU4a1JG6MhuLNCfVNoTmzEBdK2xkxlmsGUIm7Hz9LZX/7R9zXqSibK9PznWdVdveIkSuHN/pS/1D5aJJiOkrSOqksHuIhhlv7fg/8GeNIGtwrxYxF2E5TvgNuPdw==)
 
 google:
