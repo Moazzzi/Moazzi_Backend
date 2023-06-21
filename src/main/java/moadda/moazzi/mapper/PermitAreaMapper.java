@@ -1,6 +1,8 @@
 package moadda.moazzi.mapper;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeParseException;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -71,6 +73,15 @@ public interface PermitAreaMapper {
 	@Named("toLocalDate")
 	default LocalDate toLocalDate(String date) {
 		return LocalDate.parse(date);
+	}
+	
+	@Named("toLocalTime")
+	default LocalTime toLocalTime(String time) {
+		try {
+			return LocalTime.parse(time);
+		}catch(DateTimeParseException e){
+			return LocalTime.MIN;
+		}
 	}
 	
 }
