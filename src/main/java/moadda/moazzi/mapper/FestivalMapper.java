@@ -8,7 +8,7 @@ import org.mapstruct.Named;
 
 import moadda.moazzi.dto.festival.FestivalRequestDto;
 import moadda.moazzi.dto.festival.FestivalResponseDto;
-import moadda.moazzi.dto.openapi.data.go.kr.festival.Item;
+import moadda.moazzi.dto.openapi.data.go.kr.festival.FestivalItem;
 import moadda.moazzi.entity.Festival;
 
 @Mapper(componentModel = "spring")
@@ -28,7 +28,7 @@ public interface FestivalMapper {
 	@Mapping(target = "jibunAddress", source = "item.lnmadr")
 	@Mapping(target = "latitude", source = "item.latitude", qualifiedByName = "toDouble")
 	@Mapping(target = "longitude", source = "item.longitude", qualifiedByName = "toDouble")
-	Festival toEntity(Item item);
+	Festival toEntity(FestivalItem item);
 	
 	@Mapping(target = "id", source = "festival.id")
 	@Mapping(target = "name", source = "festival.name")

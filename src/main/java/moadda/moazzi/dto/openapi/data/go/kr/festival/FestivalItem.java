@@ -3,7 +3,7 @@ package moadda.moazzi.dto.openapi.data.go.kr.festival;
 import lombok.Data;
 
 @Data
-public class Item {
+public class FestivalItem {
     private String fstvlNm;
     private String opar;
     private String fstvlStartDate;

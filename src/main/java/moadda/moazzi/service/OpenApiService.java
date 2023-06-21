@@ -3,13 +3,14 @@ package moadda.moazzi.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import moadda.moazzi.dto.openapi.data.go.kr.festival.CultureFestivalDto;
-import moadda.moazzi.dto.openapi.data.go.kr.festival.Item;
+import moadda.moazzi.dto.openapi.data.go.kr.comm.OpenApiResponse;
+import moadda.moazzi.dto.openapi.data.go.kr.festival.FestivalItem;
 import moadda.moazzi.entity.Festival;
 import moadda.moazzi.mapper.FestivalMapper;
 import moadda.moazzi.repository.FestivalRepository;
@@ -39,11 +40,11 @@ public class OpenApiService {
 		return Integer.parseInt(getFestivalData(1, 1).getResponse().getBody().getTotalCount());
 	}
 	
-	private List<Item> getFestivalData(int pageNo) {
+	private List<FestivalItem> getFestivalData(int pageNo) {
 		return getFestivalData(pageNo, 100).getResponse().getBody().getItems();
 	}
 	
-	private void saveFestivalData(List<Item> items) {
+	private void saveFestivalData(List<FestivalItem> items) {
 		List<Festival> festivals = items.stream().map(festivalMapper::toEntity).toList();
 		for(Festival festival : festivals ) {
 			//festivalRepository.save(festival);
@@ -51,7 +52,7 @@ public class OpenApiService {
 		}
 	}
 	
-	private CultureFestivalDto getFestivalData(int pageNo, int numOfRows) {
+	private OpenApiResponse<FestivalItem> getFestivalData(int pageNo, int numOfRows) {
 		return webClient.get()
 		        .uri("http://api.data.go.kr/openapi", uriBuilder -> uriBuilder
 		        		.path("/tn_pubr_public_cltur_fstvl_api")
@@ -61,7 +62,7 @@ public class OpenApiService {
 		                .queryParam("numOfRows", numOfRows)
 		                .build())
 		        .retrieve()
-		        .bodyToMono(CultureFestivalDto.class)
+		        .bodyToMono(new ParameterizedTypeReference<OpenApiResponse<FestivalItem>>() {})
 		        .block();
 	}
 	

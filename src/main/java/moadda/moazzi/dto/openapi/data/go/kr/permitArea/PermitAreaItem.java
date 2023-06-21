@@ -3,7 +3,7 @@ package moadda.moazzi.dto.openapi.data.go.kr.permitArea;
 import lombok.Data;
 
 @Data
-public class Item {
+public class PermitAreaItem {
     private String prmisnZoneNm;
     private String lcType;
     private String ctprvnNm;

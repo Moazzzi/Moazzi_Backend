@@ -1,4 +1,4 @@
-package moadda.moazzi.dto.openapi.data.go.kr.festival;
+package moadda.moazzi.dto.openapi.data.go.kr.comm;
 
 import lombok.Data;
 
