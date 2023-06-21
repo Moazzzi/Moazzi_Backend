@@ -20,21 +20,14 @@ import moadda.moazzi.dto.festival.FestivalPageResponseDto;
 import moadda.moazzi.dto.festival.FestivalRequestDto;
 import moadda.moazzi.dto.festival.FestivalResponseDto;
 import moadda.moazzi.service.FestivalService;
-import moadda.moazzi.service.OpenApiFestivalService;
+import moadda.moazzi.service.OpenApiService;
 
 @RestController
 @RequestMapping("/api/v1/festivals")
 @RequiredArgsConstructor
 @Tag(name = "축제", description = "축제 정보 api 입니다.")
 public class FestivalController {
-	private final OpenApiFestivalService apiFestivalService;
 	private final FestivalService festivalService;
-	
-	//@GetMapping("init")
-	public ResponseEntity<?> initData(){
-		apiFestivalService.initDataInsert();
-		return ResponseEntity.ok().build();
-	}
 	
 	@Operation(summary = "축제 데이터 리스트 조회", description = "축제 데이터 리스트 조회 메서드입니다.")
     @ApiResponses(value = {
